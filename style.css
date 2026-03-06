@@ -1,0 +1,141 @@
+:root{
+ --low:#22c55e;
+ --med:#facc15;
+ --high:#ef4444;
+ --glass:rgba(255,255,255,0.08);
+}
+
+body{
+ margin:0;
+ font-family:Calibri;
+ background:radial-gradient(circle at top,#0f172a,#020617);
+ color:white;
+}
+
+header{
+ padding:18px;
+ text-align:center;
+ font-size:28px;
+ font-weight:bold;
+ background:linear-gradient(90deg,#0ea5e9,#22c55e);
+ color:black;
+ position:fixed;
+ width:100%;
+ top:0;
+}
+
+.login-page{
+ height:100vh;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+}
+
+.login-box{
+ background:rgba(255,255,255,0.1);
+ padding:40px;
+ border-radius:15px;
+ width:300px;
+ text-align:center;
+}
+
+.login-box input{
+ width:100%;
+ padding:10px;
+ margin:10px 0;
+ border:none;
+ border-radius:8px;
+}
+
+.login-box button{
+ width:100%;
+ padding:10px;
+ border:none;
+ border-radius:8px;
+ background:linear-gradient(90deg,#0ea5e9,#22c55e);
+ font-weight:bold;
+ cursor:pointer;
+}
+
+#mainSystem{
+ display:none;
+ padding-top:80px;
+}
+
+.sidebar{
+ width:220px;
+ height:100vh;
+ position:fixed;
+ background:#020617;
+ padding-top:30px;
+ border-right:1px solid #1e293b;
+}
+
+.sidebar div{
+ padding:12px 20px;
+ cursor:pointer;
+}
+
+.sidebar div:hover{
+ background:#1e293b;
+}
+
+.content{
+ margin-left:240px;
+ padding:30px;
+}
+
+section{
+ background:var(--glass);
+ padding:25px;
+ border-radius:15px;
+ margin-bottom:25px;
+}
+
+.circle{
+ width:160px;
+ height:160px;
+ border-radius:50%;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ font-size:24px;
+ margin:auto;
+ background:conic-gradient(var(--low) 0%, #1e293b 0%);
+}
+
+.badge{
+ padding:6px 16px;
+ border-radius:20px;
+ font-weight:bold;
+}
+
+.low{background:var(--low);color:black}
+.medium{background:var(--med);color:black}
+.high{background:var(--high);color:black}
+
+.hidden{display:none}
+
+table{
+ width:100%;
+ border-collapse:collapse;
+}
+
+th,td{
+ padding:10px;
+ border-bottom:1px solid rgba(255,255,255,0.2);
+ text-align:center;
+}
+
+.stat-grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+ gap:20px;
+}
+
+.stat{
+ background:#1e293b;
+ padding:20px;
+ border-radius:15px;
+ text-align:center;
+}

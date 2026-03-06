@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Secure Financial Fraud Detection System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>Secure Financial Fraud Detection System</header>
+
+<div class="login-page" id="loginPage">
+<div class="login-box">
+
+<h2>Secure Login</h2>
+
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Enter System</button>
+
+<p id="loginError" style="color:red;display:none;">Enter valid details</p>
+
+</div>
+</div>
+
+
+<div id="mainSystem">
+
+<div class="sidebar">
+
+<h3>Modules</h3>
+
+<div onclick="showSection('overview')">System Overview</div>
+<div onclick="showSection('inputSection')">Transaction Input</div>
+<div onclick="showSection('riskDashboard')">Risk Analysis</div>
+<div onclick="showSection('fraudReports')">Fraud Reports</div>
+<div onclick="showSection('secureData')">Live Dashboard</div>
+
+</div>
+
+
+<div class="content">
+
+<section id="overview">
+<h2>System Overview</h2>
+<p>This system detects fraudulent financial transactions using intelligent risk analysis.</p>
+</section>
+
+
+<section id="inputSection">
+
+<h2>Transaction Input</h2>
+
+<label>Account Number</label>
+<input type="text" id="account">
+
+<label>Transaction Amount</label>
+<input type="number" id="amount">
+
+<label>Transaction Frequency</label>
+<input type="number" id="frequency">
+
+<label>Card Type</label>
+<select id="card">
+<option>Debit</option>
+<option>Credit</option>
+<option>UPI</option>
+</select>
+
+<button onclick="calculateRisk()">Analyze Risk</button>
+
+</section>
+
+
+<section id="riskDashboard" class="hidden">
+
+<h2>Risk Analysis Result</h2>
+
+<div class="circle" id="riskCircle">
+<span id="riskPercent">0%</span>
+</div>
+
+<p>Status: <span id="riskBadge" class="badge low">SAFE</span></p>
+
+<p><b>Account:</b> <span id="showAccount"></span></p>
+<p><b>Detected Card:</b> <span id="detectedCard"></span></p>
+
+<div class="risk-item"><span>Amount Risk</span><span id="amountRisk"></span></div>
+<div class="risk-item"><span>Frequency Risk</span><span id="freqRisk"></span></div>
+
+<p id="aiExplain"></p>
+
+</section>
+
+
+<section id="fraudReports" class="hidden">
+
+<h2>Transaction Reports</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Account</th>
+<th>Amount</th>
+<th>Status</th>
+</tr>
+</thead>
+
+<tbody id="reportTable"></tbody>
+
+</table>
+
+</section>
+
+
+<section id="secureData" class="hidden">
+
+<h2>Live Dashboard</h2>
+
+<div class="stat-grid">
+
+<div class="stat">
+Total Transactions
+<br><b id="totalTx">0</b>
+</div>
+
+<div class="stat">
+Fraud
+<br><b id="fraudTx">0</b>
+</div>
+
+<div class="stat">
+Safe
+<br><b id="safeTx">0</b>
+</div>
+
+</div>
+
+</section>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
